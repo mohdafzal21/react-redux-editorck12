@@ -1,17 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import "milligram";
 import './index.css'
 import App from './components/App'
-
-
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  
-    <App />,
-  document.getElementById('root')
-)
-
-
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
 
 
 // import { Provider } from 'react-redux'
